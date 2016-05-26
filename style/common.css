@@ -53,13 +53,17 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+body{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/big.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 .contain{
     width:700px;
     margin:0 auto;
     padding: 0;
-     background-image: url(../img/big.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 .title{
     text-align:center
