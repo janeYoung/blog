@@ -55,7 +55,11 @@ table {
 }
 .contain{
     width:700px;
-    margin:60px auto;
+    margin:0 auto;
+    padding: 0;
+     background-image: url(../img/big.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 .title{
     text-align:center
