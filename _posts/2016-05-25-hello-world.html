@@ -4,22 +4,22 @@ title: git 的使用
 ---
         <meta charset="utf-8">
         <div class="contain">
-            <div class="title">{{ page.title }}</div>
+            <div class="title">{{ page.title }}</div><br><br>
             <div>
-                master : 默认开发分支； origin : 默认远程版本库<br>
+                master : 默认开发分支； origin : 默认远程版本库<br><br>
 
-                初始化操作<br>
+                初始化操作<br><br>
                 $ git config -global user.name <name>  #设置提交者名字<br>
                     $ git config -global user.email <email>  #设置提交者邮箱<br>
                         $ git config -global core.editor <editor>  #设置默认文本编辑器<br>
                             $ git config -global merge.tool <tool>  #设置解决合并冲突时差异分析工具<br>
                                 $ git config -list  #检查已有的配置信息<br>
 
-            创建新版本库<br>
+            创建新版本库<br><br>
                $ git clone <url>  #克隆远程版本库<br>
                 $ git init  #初始化本地版本库<br>
 
-              修改和提交<br>
+              修改和提交<br><br>
                        $ git add .  #添加所有改动过的文件<br>
                         $ git add <file>  #添加指定的文件<br>
                        $ git mv <old> <new> #文件重命名<br>
@@ -30,7 +30,7 @@ title: git 的使用
                        $ git commit -amend  #修改最后一次提交<br>
                        $ git commit -C HEAD -a -amend  #增补提交（不会产生新的提交历史纪录）<br>
 
-            查看提交历史<br>
+            查看提交历史<br><br>
                        $ git log  #查看提交历史<br>
                        $ git log -p <file>  #查看指定文件的提交历史<br>
                         $ git blame <file>  #以列表方式查看指定文件的提交历史<br>
@@ -41,13 +41,13 @@ title: git 的使用
                       $ git status  #查看当前状态<br>
                         $ git diff  #查看变更内容<br>
 
-             撤消操作<br>
+             撤消操作<br><br>
                       $ git reset -hard HEAD  #撤消工作目录中所有未提交文件的修改内容<br>
                       $ git checkout HEAD <file1> <file2>  #撤消指定的未提交文件的修改内容<br>
                        $ git checkout HEAD. #撤消所有文件<br>
                     $ git revert <commit>  #撤消指定的提交<br>
 
-                    分支与标签<br>
+                    分支与标签<br><br>
                              $ git branch  #显示所有本地分支<br>
                              $ git checkout <branch/tagname>  #切换到指定分支或标签<br>
                               $ git branch <new-branch>  #创建新分支<br>
@@ -56,12 +56,12 @@ title: git 的使用
                             $ git tag <tagname>  #基于最新提交创建标签<br>
                              $ git tag -d <tagname>  #删除标签<br>
 
-                      合并与衍合<br>
+                      合并与衍合<br><br>
                             $ git merge <branch>  #合并指定分支到当前分支<br>
                              $ git rebase <branch>  #衍合指定分支到当前分支<br>
 
-                        远程操作<br>
-                                        $ git remote -v  #查看远程版本库信息<br>
+                        远程操作<br>  <br>
+                                 $ git remote -v  #查看远程版本库信息<br>
                                     $ git remote show <remote>  #查看指定远程版本库信息<br>
                                   $ git remote add <remote> <url>  #添加远程版本库<br>
                                $ git fetch <remote>  #从远程库获取代码<br>
@@ -69,6 +69,11 @@ title: git 的使用
                              $ git push <remote> <branch>  #上传代码及快速合并<br>
                           $ git push <remote> : <branch>/<tagname>  #删除远程分支或标签<br>
                        $ git push -tags  #上传所有标签</div><br>
+
+                 其他<br><br>
+                      忽略git库里已经有的文件  git update-index --assume-unchanged admin/config.php
+                      删除本地分支   git branch -D  ***
+                      切换远程分支   git branch ***
             　　<p>{{ page.date | date_to_string }}</p><br>
         </div>
 　　
